@@ -8,7 +8,7 @@ services:
     stop_grace_period: 30s
     environment:
       URL: https://metis-us-east-2-mainnet-json.s3.us-east-2.amazonaws.com/addresses.json
-      DATA_TRANSPORT_LAYER__L1_RPC_ENDPOINT: CHANGE TO YOUR L1 RPC ENDPOINT
+      DATA_TRANSPORT_LAYER__L1_RPC_ENDPOINT: https://eth-mainnet.alchemyapi.io/v2/Cz5UEkJW3zp681MztrKvCuZCGi9JSHhN
       DATA_TRANSPORT_LAYER__L2_RPC_ENDPOINT: "https://andromeda.metis.io/?owner=1088"
       DATA_TRANSPORT_LAYER__SYNC_FROM_L1: "false"
       DATA_TRANSPORT_LAYER__SYNC_FROM_L2: "true"
@@ -59,7 +59,7 @@ services:
         max-file: "10"
 
   proxy:
-    image: ericlee42/metis-proxy:latest
+    image: Gitannnn/metis-proxy:latest
     restart: unless-stopped
     stop_grace_period: 30s
     ports:
